@@ -134,6 +134,7 @@ class PinItem extends Component {
           focus ? Object.assign({}, styles.inputFocus, inputFocusStyle) : {},
         )}
         value={value}
+        {...this.props.inputProps}
       />
     );
   }
@@ -155,6 +156,7 @@ PinItem.propTypes = {
   regexCriteria: PropTypes.any,
   ariaLabel: PropTypes.string,
   placeholder: PropTypes.string,
+  inputProps: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 PinItem.defaultProps = {
@@ -167,7 +169,8 @@ PinItem.defaultProps = {
   onPaste: undefined,
   regexCriteria: /^[a-zA-Z0-9]+$/,
   ariaLabel: '',
-  placeholder: ''
+  placeholder: '',
+  inputProps: undefined,
 };
 
 export default PinItem;

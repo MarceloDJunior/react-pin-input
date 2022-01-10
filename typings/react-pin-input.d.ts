@@ -21,6 +21,7 @@ declare module "react-pin-input" {
     regexCriteria?: any;
     ariaLabel?: string
     placeholder?: string
+    inputProps?: any
   }
 
   class PinInput extends React.Component<PinInputProps> {

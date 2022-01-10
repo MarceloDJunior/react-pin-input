@@ -100,6 +100,7 @@ class PinInput extends Component {
             regexCriteria={this.props.regexCriteria}
             ariaLabel={this.props.ariaLabel}
             placeholder={this.props.placeholder}
+            inputProps={this.props.inputProps}
           />
         ))}
       </div>
@@ -125,6 +126,7 @@ PinInput.propTypes = {
   regexCriteria: PropTypes.any,
   ariaLabel: PropTypes.string,
   placeholder: PropTypes.string,
+  inputProps: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
 PinInput.defaultProps = {
@@ -143,7 +145,8 @@ PinInput.defaultProps = {
   autoSelect: true,
   regexCriteria: /^[a-zA-Z0-9]+$/,
   ariaLabel: '',
-  placeholder: ''
+  placeholder: '',
+  inputProps: undefined,
 };
 
 export default PinInput;
